@@ -12,4 +12,4 @@ If you run Dewi directly and without arguments, an editor opens that helps you w
 
 DEWICODE is the language for managing widgets and performing the main scripting functions in the Dewi interpreter.
 The documentation can be read in just a few minutes, allowing you to completely learn the language!
-
+ [Documentation and Application](https://github.com/nikkNizz/Dewi/releases)  
