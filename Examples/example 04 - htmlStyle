@@ -1,0 +1,8 @@
+#> htmlStyle for edit widget
+
+createWidget>label; lbl ; Hello World ; 20; 30; 400; 40
+editWidget>label.lbl.htmlStyle ; background: #57e389\s.\border-style: double dotted\s.\border-width: 4px\s.\border-radius: 10px\s.\font-family: JetBrains Mono\s.\font-size: 24px\s.\font-weight: bold\s.\color: #e01b24\s.\
+
+createWidget>lineEdit; line ; Hello ; 20; 80 ; 400 ; 40
+editWidget>lineEdit.line.htmlStyle ; background: #1a5fb4\s.\border-color: #ffa348\s.\border-radius: 10px\s.\font-size: 20px\s.\font-style: italic\s.\color: white\s.\
+end >

@@ -1,0 +1,14 @@
+#> Nextval (other loops are nextchars, nextItem, nextRow, nextLoop)
+
+iter =  >0
+sum =  >0
+
+nextval > \iter\ ; 1 ; 3
+ num = inputbox >Enter a number (\iter\ of 3);
+ iffloat >\num\
+  sum = calc >\sum\ + \num\
+ endif>
+next>
+
+msgbox>Sum = \sum\
+end >

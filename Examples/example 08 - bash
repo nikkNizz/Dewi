@@ -1,0 +1,31 @@
+#> prg for Bash command example in Dewi ( hostnamectl, top,  df, find)
+
+createwidget >button; host ; Hostnamectl ; 10; 20; 100; 28;;cyan
+createwidget >button; top ; Top ; 120; 20; 100; 28;;cyan
+createwidget >button; df ; Df ; 230; 20; 100; 28;;cyan
+createwidget >button; find ; Find ; 340; 20; 100; 28;;cyan
+createwidget >textBox; tbox ; ;10; 50; 630; 480
+editwidget >textBox.tbox.fontsize ; 18
+
+nextloop >
+
+ ifevent >host
+  x = prg >hostnamectl;status
+  editwidget >textBox.tbox.text; \x\
+ endif>
+ ifevent >top
+  x = prg >top;-n|1|-b
+  editwidget >textBox.tbox.text; \x\
+ endif>
+ ifevent >df
+  x = prg >df;-BM
+  editwidget >textBox.tbox.text; \x\
+ endif>
+ ifevent >find
+  v = inputbox >Enter a search string into a file name;
+  x = prg >find;\user\|-type|f|-iname|*\v\*
+  editwidget >textBox.tbox.text; \x\
+ endif>
+
+next>
+end >

@@ -1,0 +1,24 @@
+#listbox, playsound
+
+path1 =>/usr/share/sounds/gnome/default/alerts;full
+path2 =>/usr/share/sounds/freedesktop/stereo;full
+
+ifexists>\path1\
+mus = subdir >\path1\;full
+endif>
+ifexists>\path2\
+mus2 = subdir >\path2\;full
+endif>
+
+createwidget >listBox; music ; \mus\|\mus2\ ;10; 60; 650; 500
+editwidget >listBox.music.fontsize ; 16
+
+nextloop >
+
+ ifevent >music
+  path = getproperty >listBox.music.selected
+  playsound >\path\
+ endif>
+
+next>
+end >

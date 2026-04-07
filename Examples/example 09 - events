@@ -1,0 +1,19 @@
+#> events
+
+createwidget >label; lbl ; Drag a file onto the window(not the textbox) and display its contents.\n.\Move the slider and display the value. ;10;10;500;50;red;;;36
+createwidget >slider; slider1 ;  ;10;70;320;30;;; ; ; ;;160
+createwidget >textBox; tbox ;  ;10;120;500;450;;;;18;courier
+
+nextloop >
+
+ ifevent >slider1
+  x = getproperty >slider.slider1.value
+  msgbox >Value: \x\
+ endif>
+ ifevent >this
+  x = fileread >\dragged\
+  editwidget >textBox.tbox.text; \x\
+ endif>
+
+next>
+end >

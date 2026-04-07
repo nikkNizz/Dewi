@@ -1,0 +1,11 @@
+# listfrom, listextract, listsort
+
+list = listfrom >\user\/.bash_history ; \n.\ ; noPipe
+
+list2 = listextract>\list\;3;0;
+
+list3 = listSort>\list2\
+
+createWidget>listBox; lbox ; \list3\ ; 20; 30; 450; 500
+
+end>

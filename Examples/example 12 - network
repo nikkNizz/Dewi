@@ -1,0 +1,12 @@
+#network, midstring, no
+
+x = network >get ; https://github.com/nikkNizz/Drawish/blob/main/README.md
+
+x = midstring >\x\ ; <table> ; </table>
+x = no>\x\ ; < ; >
+
+createwidget >textBox; tbox ; \x\ ;10; 10; 600; 400
+
+end>
+
+

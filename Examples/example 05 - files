@@ -1,0 +1,22 @@
+# files folder
+
+path = filedialog >file; \user\ ; Choose a file
+f = fileread >\path\
+createwidget >textBox; tbox ; \f\ ; 10; 10; 500; 360
+createwidget >button; btn_save ; SAVE ; 10; 380; 100; 40
+createwidget >button; close_btn ; CLOSE ; 120; 380; 100; 40;white; red
+
+nextloop >
+
+ ifevent >btn_save
+  text = getproperty >textBox.tbox.text
+  filewrite >\path\.new;\text\
+  msgbox >Saved!
+ endif>
+
+ ifevent >close_btn
+  close >
+ endif>
+
+next>
+end >

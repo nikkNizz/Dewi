@@ -1,0 +1,47 @@
+#call case  funct
+createwidget >label; lbl ; Operation on selection or text ;400; 10; 240; 20
+createwidget >textbox; tbox ; \nothing\ ;10; 40;380; 420
+createwidget >listBox; lbox ; Nothing|To upper|toLower|calculate|speak ;400; 40; 240; 200
+
+nextloop >
+ ifevent >lbox
+  getproperty >listBox.lbox.index
+  case >1 ; toUpp ; 2 ; toLow ; 3 ; calc ; 4 ; talk
+ endif>
+
+next>
+
+funct >toUpp
+call >getTx
+tx = ucase >\tx\
+editwidget >textBox.tbox.insert ; \tx\
+
+endfunct>
+
+funct>toLow
+call >getTx
+tx = lcase >\tx\
+editwidget >textBox.tbox.insert ; \tx\
+endfunct>
+
+funct>calc
+call >getTx
+tx = calc >\tx\
+editwidget >textBox.tbox.insert ; \tx\
+endfunct>
+
+funct>talk
+call >getTx
+speak >\tx\
+endfunct>
+
+funct>getTx
+tx = getproperty >textBox.tbox.selected
+ifeq >\tx\;\nothing\
+ tx = getproperty >textBox.tbox.text
+endif>
+endfunct>
+
+end >
+
+

@@ -1,0 +1,21 @@
+#editwindow random  colorpicker
+
+editwindow >title ; Hello Dewi
+k = colorpicker>
+editwindow >bgcolor ;\k\
+colors =  >#ff0000|#00ff00|#0000ff|#ffff00|#ff00ff|#00ffff|#ef5244|#12cc88
+createwidget >button; btnMin ; Minimize ;10; 20; 100;28
+createwidget >button; btnColor ; Change color ;120; 20;100;28
+
+nextloop >
+ ifevent >btnMin
+  editwindow >minimize
+ endif>
+ ifevent >btnColor
+  c = random >7
+  col = listat >\colors\;\c\
+  editwindow >bgcolor ; \col\
+ endif>
+
+next>
+end >

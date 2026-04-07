@@ -1,0 +1,21 @@
+#> dialogs: inputbox, messagebox
+
+k = inputbox >Enter an expression; 15 + (20*9)/5
+k = calc >\k\
+j = msgbox >The result is \k\; *6 ; /7 ; -40; Close
+
+ifeq >\j\; 1
+ k = calc >\k\*6
+else>
+ ifeq >\j\; 2
+  k = calc >\k\/7
+ else>
+  ifeq >\j\; 3
+   k = calc >\k\-40
+  else>
+   close >
+  endif>
+ endif>
+endif>
+msgbox >\k\
+end >

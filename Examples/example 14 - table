@@ -1,0 +1,35 @@
+# table filedialog nextrow
+
+createwidget >table; table1 ; \nothing\; 20; 20; 900; 360 ; 10; 8
+createwidget >button; btn ; save Table ;20; 400; 100; 26
+createwidget >button; sum_ ; sum coloumn 3 ;130; 400; 120; 26
+
+nextloop >
+ ifevent >btn
+  t = getproperty >table.table1.list
+  path = filedialog >save; \user\ ; Enter a file name
+  b = filewrite >\path\;\t\;
+  ifeq >\b\ ; !error ; not
+   notify >
+  endif>
+ endif>
+
+ ifevent >sum_
+  list = getproperty >table.table1.list
+  sum =  >0
+  row = nextrow >\list\
+   item = listat >\row\;2
+   iffloat >\item\
+    sum = calc >\sum\ + \item\
+   endif>   
+  next>
+  editwidget >table.table1.setSelected ; 9|3
+  editwidget >table.table1.editSelected ; \sum\
+ endif>
+next>
+
+end >
+
+
+
+

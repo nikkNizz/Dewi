@@ -1,0 +1,21 @@
+#> click a button : edit a label
+
+createWidget>label; lbl ; \nothing\ ;80;80;300;30;red;;;24;
+createWidget>button; btn ; Show ; 80;40;80;28; red
+
+display =>0
+
+nextloop>
+ ifevent>btn
+   ifEq >\display\ ; 0
+     editWidget>label.lbl.text ; ***HELLO WORLD***
+     editWidget>button.btn.text ; Hide
+     display = >1
+   else>
+     editWidget>label.lbl.text ; \nothing\
+     editWidget>button.btn.text ; Show
+     display = >0
+   endif>
+ endif>
+next>
+end>
