@@ -1,6 +1,6 @@
 # Dewi 0.2
 **De**clarative **wi**dget creator for **Linux** (beta).  
-Dewi is a program for creating minimal forms, executing its own functions and external commands using the declarative DewiCode language.
+Dewi is a program for creating minimal forms, executing builtin functions and external commands using the declarative DewiCode language.
 
 It comes from my previous language *DunoCode* which does not support widgets and can be more practical in several cases.
 
