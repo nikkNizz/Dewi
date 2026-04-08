@@ -8,7 +8,7 @@ The program is both an interpreter and an editor.
 Once you've downloaded the AppImage, you'll need to grant it execute permissions.  
 Move the package to a directory more suitable for your needs without renaming it, then launch it. The program will perform a necessary and reversible system integration in the background. The Dewi_scripts folder will be created.  
 
-If you run Dewi directly and without arguments, an editor opens that helps you write scripts. If you click on a script or run Dewi from the terminal by passing the path to a script, it will execute that script. The first time you run Dewi, you must run it directly without arguments.
+If you run Dewi directly and without arguments, an editor opens that helps you write scripts. If you click on a script or run Dewi from the terminal by passing the path to a script, it will execute that script. The first time run Dewi directly without arguments.
 
 DEWICODE is the language for managing widgets and performing the main scripting functions in the Dewi interpreter.
 The documentation can be read in just a few minutes, allowing you to completely learn the language!  
