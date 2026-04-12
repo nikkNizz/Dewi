@@ -1,4 +1,4 @@
-# Dewi 0.3
+# Dewi 0.4
 **De**clarative **wi**dget creator for **Linux** (beta).  
 Dewi is a program for creating minimal forms, executing builtin functions and external commands using the declarative DewiCode language.
 
